@@ -1,0 +1,8 @@
+{block content}
+<ul>
+	<li n:if="!$user->isLoggedIn()"><a n:href="login">Login</a></li>
+	<li n:if="$user->isLoggedIn()"><a n:href="logout">Logout</a></li>
+	<li n:if="$user->isLoggedIn()"><a n:href="registerU2f">Register U2F device</a></li>
+	<li n:if="$user->isLoggedIn()"><a n:href="clear">Unregister all U2F devices</a></li>
+</ul>
+{/block}

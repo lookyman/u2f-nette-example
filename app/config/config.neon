@@ -1,0 +1,16 @@
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+extensions:
+	u2f: lookyman\U2fNette\DI\U2FExtension
+
+php:
+	date.timezone: Europe/Prague
+
+services:
+	router: App\RouterFactory::createRouter
+
+session:
+	expiration: 14 days
